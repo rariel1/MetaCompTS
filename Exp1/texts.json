@@ -1,0 +1,71 @@
+{
+
+  "label1": {
+    "title": "Geological Processes", 
+    "text": "<p>A mineral is a crystalline solid formed through geological processes. A geologic process is a natural process that occurs in or on Earth and that shapes Earth’s features, including volcanic activity; the movement of tectonic plates; the formation of sedimentary layers of sand and mud; and the folding of those layers until, deep in the Earth, they are exposed to high pressures and temperatures.</p>"
+  },
+  "label2": {
+    "title": "Inorganic Substances",
+    "text": "<p>A mineral is an inorganic substance, which usually means it was not made by living organisms. Organic substances are all the carbon-based compounds made by living creatures, including proteins, carbohydrates, and oils. This definition includes fossil fuels such as coal and oil, which were originally made by living organisms millions of years ago. Everything else is considered inorganic. In a few exceptional cases, living organisms produce inorganic materials, such as the calcium carbonate shells of marine organisms.</p>"
+  },
+  "label3": {
+    "title": "Crystalline Solids",
+    "text": "<p>Minerals are crystalline solids. Therefore, natural inorganic substances that are liquids are not minerals. For example, liquid water is inorganic, but it is not a mineral. Even some solids may not be crystalline. A crystal is a solid in which the atoms are arranged in a regular, repeating pattern. For example, in table salt, sodium ions bond with chloride ions to form halite crystals.  The ions sodium and chloride are arranged in table salt in an alternating repeating pattern across three dimensions. The pattern of atoms in different samples of the same mineral is the same. Think about all of the grains of salt that are in a salt shaker. The atoms are arranged in the same way in every piece of salt.</p>"
+  },
+  "label4": {
+    "title": "Elements",
+    "text": "<p>All minerals have a specific chemical composition. Minerals are either pure elements or chemical compounds. An element is a substance in which all of the atoms have the same number of protons. Protons are the positive particles in the center of every atom, the nucleus. You cannot change an element into another element by chemical means because the number of protons does not change. Silver, sodium, silicon, and oxygen are a few of the elements found in minerals. A few minerals are made of only one kind of element. The mineral silver is a pure element because it is made up of only silver atoms.</p>"
+  },
+  "label5": {
+    "title": "Compounds",
+    "text": "<p>Most minerals, such as halite and quartz, are made up of chemical compounds. A chemical compound is a substance in which the atoms of two or more elements bond together. The elements in a chemical compound are in a certain ratio. Minerals that are not pure elements are made of compounds. For example, the mineral quartz is made of the compound silicon dioxide. This compound has one atom of the element silicon for every two atoms of the element oxygen. When a mineral has a different chemical formula, it is a different mineral. For example, the mineral hematite has two iron atoms for every three oxygen atoms, while the mineral magnetite has three iron atoms for every four oxygen atoms. Many minerals contain more complex chemical compounds that are made of several elements. However, even the elements in more complicated compounds occur in certain ratios.</p>"
+  },
+   "label6": {
+    "title": "How are minerals made?",
+    "text": "<p>Minerals are made by geological processes.</p>"
+  },
+   "label7": {
+    "title": "What are types of geological processes?",
+    "text": "<p>Types of geological processes include volcanic activity, erosion, and movement of tectonic plates.</p>"
+  },
+   "label8": {
+    "title": "What is an inorganic substance?",
+    "text": "<p>Inorganic substances are substances that were not made by living things.</p>"
+  },
+   "label9": {
+    "title": "What is an organic substance?",
+    "text": "<p>Organic substances are carbon-based substances that were made by living things.</p>"
+  },
+   "label10": {
+    "title": "Which living organisms produce minerals?",
+    "text": "<p>Minerals are typically inorganic (not made by living things) but one exception is the calcum carbonate shells made by marine life.</p>"
+  },
+   "label11": {
+    "title": "What is a cystalline solid?",
+    "text": "<p>A cystalline solid is a solid in which all atoms are arranged in a regular repeating pattern.</p>"
+  },
+   "label12": {
+    "title": "Why is water not a mineral?",
+    "text": "<p>Inorganic substances like water are not minerals because minerals are inorganic solid substances.</p>"
+  },
+   "label13": {
+    "title": "How are atoms arranged in different samples of the same mineral?",
+    "text": "<p>The arrangment of the atoms in different samples of the same mineral (e.g., different samples of salt) will always be the same.</p>"
+  },
+   "label14": {
+    "title": "What is an element?",
+    "text": "<p>An element is a substance in which all of its atoms have the same number of protons.</p>"
+  },
+   "label15": {
+    "title": "Why are some minerals called pure elements?",
+    "text": "<p>Minerals are considered pure elements if they are made of only one type of atom.</p>"
+  },
+   "label16": {
+    "title": "What is a chemical compound?",
+    "text": "<p>A chemical compound is a substance containing atoms of two or more elements bonded together in a certain ratio.</p>"
+  },
+   "label17": {
+    "title": "Why are some minerals that contain the same types of elements different?",
+    "text": "<p>Minerals containing the same types of elements are different when they have different ratios of these elements.</p>"
+  }
+}
