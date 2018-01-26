@@ -1,0 +1,973 @@
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Required meta tags always come first -->
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/jspsych.css">
+        <link rel="stylesheet" href="css/pcllab-plugins.css">
+
+    <!-- jQuery first, then Bootstrap JS. -->
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <!-- Then jsPsych -->
+        <script src="jspsych.js"></script>
+
+        <!-- Plugins -->
+        <script src="plugins/pcllab-consent-form/plugin.js"></script> 
+        <script src="plugins/pcllab-instructions/plugin.js"></script>
+        <script src="plugins/pcllab-demographics/plugin.js"></script>
+        <script src="plugins/pcllab-distractor-game/plugin.js"></script>
+        <script src="plugins/pcllab-short-answer/plugin.js"></script>
+        <script src="plugins/pcllab-study-text/plugin.js"></script>
+        <script src="plugins/pcllab-ratings-slider/plugin.js"></script>
+        <script src="plugins/jspsych-call-function/plugin.js"></script>
+        <script src="plugins/pcllab-no-mobile/plugin.js"></script>
+        <script src="plugins/pcllab-environment-survey/plugin.js"></script>
+        <script src="plugins/pcllab-debrief.js"></script>   
+        <script src="plugins/jspsych-htmlTurkCode.js"></script>   
+
+
+        <title>Experiment</title>
+    </head>
+    <body>
+        <div id="experiment_container"></div>
+
+        <script>
+
+    var timeline = [];
+    var urlVars = jsPsych.data.urlVariables();
+    //var workerId = urlVars.workerId;
+    var condition = Math.floor(Math.random()*3);
+    var timeStamp = Math.floor(Date.now() / 1000);
+    var dt = new Date();
+    var utcDate = dt.toUTCString();    
+    var subjNum = jsPsych.data.getURLVariable('id');
+
+    jsPsych.data.addProperties({
+        //subNum: workerId,
+        subNum: subjNum,
+        cond: condition,
+    });
+    // Check for mobile devices //noMobile has to be pushed myTimeline.push(noMobile)
+    var noMobile = {
+        type: 'pcllab-no-mobile',  
+    };
+    var consentform = {
+        type: "pcllab-consent-form",
+    };
+    var demographics = {
+        type: "pcllab-demographics",
+    };
+
+    var instructions1 = {
+        type: 'pcllab-instructions',
+        label: 'General'
+    };
+
+    var instructions2 = {
+        type: 'pcllab-instructions',
+        label: 'Study'
+    };
+
+    var instructions3 = {
+        type: 'pcllab-instructions',
+        label: 'Test'
+    };
+
+    var RPinstructions = {
+        type: 'pcllab-instructions',
+        label: 'RP'
+    };
+   
+    var JOLinstructions = {
+        type: 'pcllab-instructions',
+        label: 'JOL'
+    };
+    var Rereadinstructions = {
+        type: 'pcllab-instructions',
+        label: 'Reread'
+    };
+
+    var NextText = {
+        type: 'pcllab-instructions',
+        label: 'NextText'
+    };
+    var CRTInstructions = {
+        type: 'pcllab-instructions',
+        label: 'CRT'
+    };
+    var StratInstructions = {
+        type: 'pcllab-instructions',
+        label: 'Strategy'
+    };  
+    var distract = {
+      type: "pcllab-distractor-game",
+      time: 1000 * 480
+    };
+    var environment_survey = {
+        type: "pcllab-environment-survey",
+    };
+    var finish = {
+        type: 'pcllab-debrief',
+        label: 'Finish'
+    };
+
+     var debrief = {
+        type: 'pcllab-debrief',
+        label: 'Debrief'
+    };
+    var debrief_block = {
+            type: 'htmlTurkCode',
+            url: 'debriefing_SONA.html', 
+            var_text: "<a href=https://purdue-psych.sona-systems.com/webstudy_credit.aspx?experiment_id=1200&credit_token=86a8b125fce146f39cdc9ffba05777c0&survey_code=" + subjNum + ">Please click here to return to the SONA website and receive credit for your participation.</a>"
+    };
+
+
+        var slide = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "<b>Please rate how confident you are that you understand the paragraph you just read by moving the slider to a value between 0 (Not very confident) and 100 (Very confident). </b>",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slide1 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> how minerals are made </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slide2 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> types of geological processes </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slide3 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> what inorganic substances are </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slide4 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions:"Please rate how confident you are that you understand <b><u> what organic substances are </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slide5 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> which living organisms produce minerals </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slide6 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> what a crystalline solid is </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slide7 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> why water is not a mineral </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slide8 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> how atoms are arranged in different samples of the same mineral </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slide9 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> what an element is </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slide10 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> why some minerals are pure elements </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slide11 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> what a chemical compound is </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slide12 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> why minerals containing the same types of elements can be different </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slideTP1 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> that minerals are made by geological processes </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slideTP2 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> that types of geological processes include volcanic activity and the movement of tectonic plates </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slideTP3 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> that inorganic substances are substances that were not made by livings things </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slideTP4 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions:"Please rate how confident you are that you understand <b><u> that organic substances are carbon-based substances that were made by living things </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slideTP5 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> that minerals are typically inorganic but one exception is the calcium carbonate shells made by marine life </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slideTP6 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> that a crystalline solid is a solid in which all atoms are arranged in a regular repeating pattern </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slideTP7 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> that inorganic substances like water are not minerals because minerals are inorganic solid substances </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slideTP8 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> that the arrangement of atoms in different samples of the same mineral will always be the same </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slideTP9 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> that an element is a substance in which all of its atoms have the same number of protons </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slideTP10 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> that minerals that are considered pure elements are made of only one type of atom </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slideTP11 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> that a chemical compound is a substance in which atoms of two or more elements bond together in a certain ratio </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+        var slideTP12 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "Please rate how confident you are that you understand <b><u> that minerals containing the same types of elements are different when they have different ratios of these elements </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+    var slideF = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "<b>Please rate how familiar you were with the content you read today before this experiment by moving the slider to a value between 0 (Not very familiar) and 100 (Very familiar). </b>",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+
+        var slideStrat1 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you <b><u> try to visualize the content you were reading. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+            var slideStrat2 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you <b><u> attempt to relate the content in each text to things you already know. </u></b> Please move thethe slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+            var slideStrat3 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you<b><u> go back and forth to different sections of the text to try to find relationships among ideas. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+            var slideStrat4 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you <b><u> try to recheck or reread information when you were unsure about it. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+            var slideStrat5 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you <b><u> think about whether or not you understood what you were reading. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+            var slideStrat6 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you <b><u> stop to think about or reflect on the content you were learning. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+            var slideStrat7 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you <b><u> try to guess what questions you might be asked on the final test. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+            var slideStrat8 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you <b><u> try to search for answers to questions that you thought were important. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+            var slideStrat9 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you <b><u> read the text multiple times. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+            var slideStrat10 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you <b><u> just skim the text without closely analyzing and evaluating the information presented. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+            var slideStrat11 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you <b><u> try to summarize the text in your head after reading it. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+            var slideStrat12 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you <b><u> try to paraphrase or restate information in your own words. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+//Geo processes
+    var text1 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 30,
+        auto_advance: true,
+        label: "label1" 
+    };
+//Inorganic substances
+     var text2 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 30,
+        auto_advance: true,
+        label: "label2" 
+    };
+//Cystaline solids
+     var text3 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 30,
+        auto_advance: true,
+        label: "label3"     
+    };
+//Elements
+     var text4 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 30,
+        auto_advance: true,
+        label: "label4"     
+    };
+//Componds
+     var text5 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 30,
+        auto_advance: true,
+        label: "label5"     
+//Feedback for RP
+    };
+     var Feedback1 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 4,
+        auto_advance: true,
+        label: "label6"     
+    };
+     var Feedback2 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 4,
+        auto_advance: true,
+        label: "label7"     
+    };
+     var Feedback3 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 4,
+        auto_advance: true,
+        label: "label8"     
+    };
+     var Feedback4 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 4,
+        auto_advance: true,
+        label: "label9"     
+    };
+      var Feedback5 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 4,
+        auto_advance: true,
+        label: "label10"     
+    };
+      var Feedback6 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 4,
+        auto_advance: true,
+        label: "label11"     
+    };
+      var Feedback7 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 4,
+        auto_advance: true,
+        label: "label12"     
+    };
+      var Feedback8 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 4,
+        auto_advance: true,
+        label: "label13"     
+    };
+      var Feedback9 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 4,
+        auto_advance: true,
+        label: "label14"     
+    };
+       var Feedback10 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 4,
+        auto_advance: true,
+        label: "label15"     
+    };
+       var Feedback11 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 4,
+        auto_advance: true,
+        label: "label16"     
+    };
+       var Feedback12 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 4,
+        auto_advance: true,
+        label: "label17"     
+    };
+//TestQs
+    var retrieve1 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 10,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false,        
+        label: "label1"
+    }; 
+
+     var retrieve2 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 10,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label2"
+    }; 
+
+     var retrieve3 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 10,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label3"
+    }; 
+
+     var retrieve4 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 10,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label4"
+    }; 
+
+     var retrieve5 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 10,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label5"
+    }; 
+
+     var retrieve6 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 10,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label6"
+    }; 
+
+     var retrieve7 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 10,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label7"
+    }; 
+
+     var retrieve8 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 10,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label8"
+    }; 
+
+     var retrieve9 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 10,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label9"
+    };
+
+    var retrieve10 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 10,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label10"
+    }; 
+
+     var retrieve11 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 10,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false,
+        label: "label11"
+    }; 
+
+     var retrieve12 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 10,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label12"
+    }; 
+
+
+     var RP1 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label13"
+    }; 
+
+     var RP2 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label14"
+    }; 
+
+       var RP3 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label15"
+    }; 
+
+       var RP4 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label16"
+    }; 
+
+       var RP5 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label17"
+    }; 
+
+       var RP6 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label18"
+    }; 
+
+       var RP7 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label19"
+    }; 
+
+       var RP8 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label20"
+    }; 
+
+       var RP9 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label21"
+    }; 
+
+    var RP10 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label22"
+    }; 
+
+       var RP11 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label23"
+    };
+
+       var RP12 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label24"
+    }; 
+
+
+           var CRT1 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label25"
+    }; 
+
+           var CRT2 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label26"
+    }; 
+
+           var CRT3 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label27"
+    }; 
+
+           var CRT4 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label28"
+    }; 
+
+       var CRT5 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label29"
+    }; 
+      // This needs to be called somewhere on your timeline before the save_data_block.
+//   var save_function = {
+//     type: 'call-function',
+//     timing_post_trial: 0,
+//     func: function saveMySQL(data){
+//      var data_table = "Delayed_Self_Scoring"; // change this for different experiments
+//      $.ajax({
+//         type:'post',
+//         cache: false,
+//         url: 'savedata.php', // change this to point to your php file.
+//         // opt_data is to add additional values to every row, like a subject ID
+//         // replace 'key' with the column name, and 'value' with the value.
+//         data: {
+//             table: data_table,
+//             json: JSON.stringify(data),
+//             // opt_data: {key: value}
+//         },
+//         success: function(output) { console.log(output); } // write the result to javascript console
+//      });
+//   };
+// };
+  // Any additional data you need to add to the file can go here.
+    jsPsych.data.addProperties({
+        subNum: subjNum,
+        cond: condition,
+        timeStamp: utcDate,
+        experiment: 'MetacompTS_Exp1',
+        //gradeNum: gradeNum,
+        //weekNum: weekNum,
+        //sortingCond: sortingCond,
+        //textCond: textCond
+    });
+
+function saveMySQL(data){
+   var data_table = "MetacompTS"; // change this for different experiments
+   $.ajax({
+      type:'post',
+      cache: false,
+      url: 'savedata.php', // change this to point to your php file.
+      // opt_data is to add additional values to every row, like a subject ID
+      // replace 'key' with the column name, and 'value' with the value.
+      data: {
+          table: data_table,
+          json: JSON.stringify(data),
+          // opt_data: {key: value}
+      },
+      success: function(output) { console.log(output); } // write the result to javascript console
+   });
+}
+
+  // Add this to your timeline after the exit survey, but before the debriefing.
+var fileName = "TestData.csv";
+
+var save_data_block = {
+  type: 'call-function',
+  timing_post_trial: 0,
+  func: function(){
+    jsPsych.data.addProperties({completed: true}); 
+    //jsPsych.data.localSave(fileName,'csv');
+    //saveCSV("filename.csv", jsPsych.data.dataAsCSV())
+    saveMySQL(jsPsych.data.getData()) //Need to edit table name in function.
+    // jsPsych.data.displayData();
+  }
+};
+
+ //
+
+       if (condition == '2') {  ////Read once with JOLs
+
+        timeline.push(noMobile, consentform, demographics, instructions1, instructions2, text1, slide, NextText, text2, slide, NextText, text3, slide, NextText, text4, slide, NextText, text5, slide, CRTInstructions, CRT1, CRT2, CRT3, instructions3, retrieve1, retrieve2, retrieve3, retrieve4, retrieve5, retrieve6, retrieve7, retrieve8, retrieve9, retrieve10, retrieve11, retrieve12, slideF, StratInstructions, slideStrat1,  slideStrat2,  slideStrat3,  slideStrat4,  slideStrat5,  slideStrat6,  slideStrat7,  slideStrat8,  slideStrat9,  slideStrat10,  slideStrat11,  slideStrat12, environment_survey, save_data_block, debrief_block);
+
+      //
+
+        } else if (condition == '1') {   ////Read once with TS Target Absent JOLs
+      
+        timeline.push(noMobile, consentform, demographics, instructions1, instructions2, text1, slide1, slide2, NextText, text2, slide3, slide4, slide5, NextText, text3, slide6, slide7, slide8, NextText, text4, slide9, slide10, NextText, text5, slide11, slide12, CRTInstructions, CRT1, CRT2, CRT3, instructions3, retrieve1, retrieve2, retrieve3, retrieve4, retrieve5, retrieve6, retrieve7, retrieve8, retrieve9, retrieve10, retrieve11, retrieve12, slideF, StratInstructions, slideStrat1,  slideStrat2,  slideStrat3,  slideStrat4,  slideStrat5,  slideStrat6,  slideStrat7,  slideStrat8,  slideStrat9,  slideStrat10,  slideStrat11,  slideStrat12, environment_survey, save_data_block, debrief_block);
+
+      //
+
+          } else if (condition == '0') {    ////Read once with TS Target Present JOLs
+      
+        timeline.push(noMobile, consentform, demographics, instructions1, instructions2, text1, slideTP1, slideTP2, NextText, text2, slideTP3, slideTP4, slideTP5, NextText, text3, slideTP6, slideTP7, slideTP8, NextText, text4, slideTP9, slideTP10, NextText, text5, slideTP11, slideTP12, CRTInstructions, CRT1, CRT2, CRT3, instructions3, retrieve1, retrieve2, retrieve3, retrieve4, retrieve5, retrieve6, retrieve7, retrieve8, retrieve9, retrieve10, retrieve11, retrieve12, slideF, StratInstructions, slideStrat1,  slideStrat2,  slideStrat3,  slideStrat4,  slideStrat5,  slideStrat6,  slideStrat7,  slideStrat8,  slideStrat9,  slideStrat10,  slideStrat11,  slideStrat12, environment_survey, save_data_block, debrief_block);
+
+      //
+
+      }
+
+            jsPsych.init({
+                display_element: $("div#experiment_container"),
+                timeline: timeline,
+                on_finish: function () {
+                    jsPsych.data.displayData();
+                }
+            })
+        </script>
+    
+
+</body></html>

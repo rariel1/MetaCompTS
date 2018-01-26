@@ -1,0 +1,117 @@
+{
+    "label1": [
+      {"question" :"<center><font size =5>How are minerals made?</font size =5></center>", "type" : "V"}
+      ],
+    
+    "label2":[
+      {"question" :"<center><font size =5>What is an example of a geological process?</font size =65></center>", "type" : "V"}
+      ],
+
+     "label3":[
+      {"question" :"<center><font size =5>What are inorganic substances?</font size =5></center>", "type" : "V"}
+      ],
+
+      "label4":[
+      {"question" :"<center><font size =5>What are organic substances?</font size =5></center>", "type" : "V"}
+      ],
+
+       "label5":[
+      {"question" :"<center><font size =5>Describe an example of a mineral created by a living organism?</font size =5></center>", "type" : "V"}
+      ],
+
+        "label6":[
+      {"question" :"<center><font size =5>What is a crystalline solid?</font size =5></center>", "type" : "V"}
+      ],
+
+         "label7":[
+      {"question" :"<center><font size =5>Why is water not a mineral even though it is an inorganic substance?</font size =5></center>", "type" : "V"}
+      ],
+
+          "label8":[
+      {"question" :"<center><font size =5>What is different about the patterns of atoms in different samples of the same mineral (e.g., different grains of salt)?</font size =5></center>", "type" : "V"}
+      ],
+
+          "label9":[
+      {"question" :"<center><font size =5>What is an element?</font size =5></center>", "type" : "V"}
+      ],
+
+          "label10":[
+      {"question" :"<center><font size =5>Why is the mineral silver a pure element?</font size =5></center>", "type" : "V"}
+      ],
+
+          "label11":[
+      {"question" :"<center><font size =5>What is a chemical compound?</font size =5></center>", "type" : "V"}
+      ],
+
+          "label12":[
+      {"question" :"<center><font size =5>Although hematite and magnetite are both compounds consisting of iron and oxygen elements, they are not the same mineral. Why?</font size =5></center>", "type" : "V"}
+      ],
+
+           "label13":[
+      {"question" :"<center><font size =5>How are minerals made?</font size =5></center>", "type" : "V"}
+      ],
+
+            "label14":[
+      {"question" :"<center><font size =5>What are types of geological processes?</font size =5></center>", "type" : "V"}
+      ],
+
+            "label15":[
+      {"question" :"<center><font size =5>What is an inorganic substance?</font size =5></center>", "type" : "V"}
+      ],
+
+            "label16":[
+      {"question" :"<center><font size =5>What is an organic substance?</font size =5></center>", "type" : "V"}
+      ],
+
+            "label17":[
+      {"question" :"<center><font size =5>Which living organisms produce minerals?</font size =5></center>", "type" : "V"}
+      ],
+
+            "label18":[
+      {"question" :"<center><font size =5>What is a cystalline solid?</font size =5></center>", "type" : "V"}
+      ],
+
+            "label19":[
+      {"question" :"<center><font size =5>Why is water not a mineral?</font size =5></center>", "type" : "V"}
+      ],
+
+            "label20":[
+      {"question" :"<center><font size =5>How are atoms arranged in different samples of the same mineral?</font size =5></center>", "type" : "V"}
+      ],
+
+            "label21":[
+      {"question" :"<center><font size =5>What is an element?</font size =5></center>", "type" : "V"}
+      ],
+
+            "label22":[
+      {"question" :"<center><font size =5>Why are some minerals called pure elements?</font size =5></center>", "type" : "V"}
+      ],
+
+            "label23":[
+      {"question" :"<center><font size =5>What is a chemical compound?</font size =5></center>", "type" : "V"}
+      ],
+
+            "label24":[
+      {"question" :"<center><font size =5>Why are some minerals that contain the same types of elements different?</font size =5></center>", "type" : "V"}
+      ],
+             "label25":[
+      {"question" :"<center><font size =6> A television and a DVD player together cost 110 dollars. The television costs 100 dollars more than the DVD player. How much does the DVD player cost?</font size =6></center>", "type" : "V"}
+      ],
+
+            "label26":[
+      {"question" :"<center><font size =6>How much time would it take 100 people to make 100 sandwiches assuming that it takes five people five minutes to make five sandwiches?</font size =6></center>", "type" : "V"}
+      ],
+
+              "label27":[
+      {"question" :"<center><font size =6>On a wall there is a patch of ivy. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire wall, how long would it take for the patch to cover half of the wall?</font size =6></center>", "type" : "V"}
+      ],
+
+              "label28":[
+      {"question" :"<center><font size =6> It takes one horse six days to eat a barrel of hay. It takes another horse 12 days to eat a barrel of hay. How many days would it take these two horses to eat a barrel of hay together?</font size =6></center>", "type" : "V"}
+      ],
+
+              "label29":[
+      {"question" :"<center><font size =6>John was ranked the 15th highest and the 15th lowest in sales at a local car dealership. How many sales people are there at this car dealership?</font size =6></center>", "type" : "V"}
+      ]
+
+}
