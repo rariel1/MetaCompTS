@@ -24,6 +24,7 @@
         <script src="plugins/pcllab-instructions/plugin.js"></script>
         <script src="plugins/pcllab-demographics/plugin.js"></script>
         <script src="plugins/pcllab-distractor-game/plugin.js"></script>
+        <script src="plugins/pcllab-multiple-choice/plugin.js"></script>
         <script src="plugins/pcllab-short-answer/plugin.js"></script>
         <script src="plugins/pcllab-study-text/plugin.js"></script>
         <script src="plugins/pcllab-ratings-slider/plugin.js"></script>
@@ -44,7 +45,7 @@
     var timeline = [];
     var urlVars = jsPsych.data.urlVariables();
     //var workerId = urlVars.workerId;
-    var condition = Math.floor(Math.random()*3);
+    var condition = 1///Math.floor(Math.random()*3);
     var timeStamp = Math.floor(Date.now() / 1000);
     var dt = new Date();
     var utcDate = dt.toUTCString();    
@@ -473,115 +474,208 @@
         display_value: true,
         hot_and_cold_slider: true
     };
-//Geo processes
+//Chernobyl Disaster Part 1
     var text1 = {
         type: 'pcllab-study-text',
         minimum_time: 1000 * 30,
         auto_advance: true,
         label: "label1" 
     };
-//Inorganic substances
+//Chernobyl Disaster Part 2
      var text2 = {
         type: 'pcllab-study-text',
         minimum_time: 1000 * 30,
         auto_advance: true,
         label: "label2" 
     };
-//Cystaline solids
+//Chernobyl Disaster Part 3
      var text3 = {
         type: 'pcllab-study-text',
         minimum_time: 1000 * 30,
         auto_advance: true,
         label: "label3"     
     };
-//Elements
+//Chernobyl Disaster Part 4
      var text4 = {
         type: 'pcllab-study-text',
         minimum_time: 1000 * 30,
         auto_advance: true,
         label: "label4"     
     };
-//Componds
+//Venice Part 1
      var text5 = {
         type: 'pcllab-study-text',
         minimum_time: 1000 * 30,
         auto_advance: true,
-        label: "label5"     
-//Feedback for RP
+        label: "label5"
     };
-     var Feedback1 = {
+//Venice Part 2
+     var text5 = {
         type: 'pcllab-study-text',
-        minimum_time: 1000 * 4,
+        minimum_time: 1000 * 30,
         auto_advance: true,
-        label: "label6"     
+        label: "label6"
     };
-     var Feedback2 = {
+//Venice Part 3
+     var text5 = {
         type: 'pcllab-study-text',
-        minimum_time: 1000 * 4,
+        minimum_time: 1000 * 30,
         auto_advance: true,
-        label: "label7"     
+        label: "label7"
     };
-     var Feedback3 = {
+//Venice Part 4
+     var text5 = {
         type: 'pcllab-study-text',
-        minimum_time: 1000 * 4,
+        minimum_time: 1000 * 30,
         auto_advance: true,
         label: "label8"     
     };
-     var Feedback4 = {
-        type: 'pcllab-study-text',
-        minimum_time: 1000 * 4,
-        auto_advance: true,
-        label: "label9"     
-    };
-      var Feedback5 = {
-        type: 'pcllab-study-text',
-        minimum_time: 1000 * 4,
-        auto_advance: true,
-        label: "label10"     
-    };
-      var Feedback6 = {
-        type: 'pcllab-study-text',
-        minimum_time: 1000 * 4,
-        auto_advance: true,
-        label: "label11"     
-    };
-      var Feedback7 = {
-        type: 'pcllab-study-text',
-        minimum_time: 1000 * 4,
-        auto_advance: true,
-        label: "label12"     
-    };
-      var Feedback8 = {
-        type: 'pcllab-study-text',
-        minimum_time: 1000 * 4,
-        auto_advance: true,
-        label: "label13"     
-    };
-      var Feedback9 = {
-        type: 'pcllab-study-text',
-        minimum_time: 1000 * 4,
-        auto_advance: true,
-        label: "label14"     
-    };
-       var Feedback10 = {
-        type: 'pcllab-study-text',
-        minimum_time: 1000 * 4,
-        auto_advance: true,
-        label: "label15"     
-    };
-       var Feedback11 = {
-        type: 'pcllab-study-text',
-        minimum_time: 1000 * 4,
-        auto_advance: true,
-        label: "label16"     
-    };
-       var Feedback12 = {
-        type: 'pcllab-study-text',
-        minimum_time: 1000 * 4,
-        auto_advance: true,
-        label: "label17"     
-    };
 //TestQs
+     var MC1 = {
+        type: 'pcllab-multiple-choice',
+        minimum_time: 1000 * 5,
+        stimulus: "Estimates claim approximately 60% of the radioactive fallout from the Chernobyl disaster landed in what country?",
+        options: ["A: Poland", "B: Ukraine", "C: Belarus", "D: Latvia", "E: Sweden"],
+        multiple_choices: false,
+        required: true,        
+    }; 
+
+    var MC2 = {
+        type: 'pcllab-multiple-choice',
+        minimum_time: 1000 * 5,
+        stimulus: "Why do some people believe that the power plant operators are not to blame for the Chernobyl disaster?",
+        options: ["A: They were never informed about problems with the nuclear reactor", "B: They were not properly trained by the government", "C: They were understaffed and overworked", "D: They were aware of the problems but powerless to avert the disaster", "E: They informed their superiors, but did not receive instructions back until too late"],
+        multiple_choices: false,
+        required: true,        
+    }; 
+
+    var MC3 = {
+        type: 'pcllab-multiple-choice',
+        minimum_time: 1000 * 5,
+        stimulus: "What group of people made up the majority of the initial injuries and deaths caused by the Chernobyl disaster?",
+        options: ["A: Operational safety personnel", "B: Emergency response workers", "C: Plant maintenance workers", "D: Local residents", "E: Nuclear reactor control staff"],
+        multiple_choices: false,
+        required: true,        
+    }; 
+
+    var MC4 = {
+        type: 'pcllab-multiple-choice',
+        minimum_time: 1000 * 5,
+        stimulus: "What happened to Yuri Bandazhevsky after he questioned the official estimates of Chernobyl’s consequences?",
+        options: ["A: He was discredited by the government", "B: He was discredited by the government", "C: He was forced into exile", "D: He disappeared mysteriously", "E: He was imprisoned"],
+        multiple_choices: false,
+        required: true,        
+    }; 
+
+    var MC5 = {
+        type: 'pcllab-multiple-choice',
+        minimum_time: 1000 * 5,
+        stimulus: "How were scientists able to predict that the radioactive fallout from Chernobyl would drift to the west over Europe?",
+        options: ["A: By tracking the locations of people who reported fallout-related illness", "B: By studying wind patterns", "C: By building computer models of how nuclear fallout moves", "D: Because the nuclear reactor had been built closer to Europe than Central Russia", "E: By researching the outcomes of previous nuclear accidents"],
+        multiple_choices: false,
+        required: true,        
+    }; 
+
+    var MC6 = {
+        type: 'pcllab-multiple-choice',
+        minimum_time: 1000 * 5,
+        stimulus: "What was the purpose of the control rods that Legasov suggested might be the cause of the Chernobyl disaster?",
+        options: ["A: The control rods were a power source", "B: The control rods were an emergency warning system", "C: The control rods were a safety mechanism", "D: The control rods were a firing mechanism", "E: The control rods were a physical support system"],
+        multiple_choices: false,
+        required: true,        
+    }; 
+
+    var MC7 = {
+        type: 'pcllab-multiple-choice',
+        minimum_time: 1000 * 5,
+        stimulus: "How many total deaths can be attributed to the nuclear meltdown at Chernobyl?",
+        options: ["A: 41", "B: 5", "C: 13", "D: 28", "E: 74"],
+        multiple_choices: false,
+        required: true,        
+    }; 
+
+    var MC8 = {
+        type: 'pcllab-multiple-choice',
+        minimum_time: 1000 * 5,
+        stimulus: "Why did activists think there was a need for a state-sponsored relocation program for people living in the areas affected by the Chernobyl disaster?",
+        options: ["A: Because the state government refused to admit any fault in the disaster", "B: Because the activists failed to raise funds through private donors", "C: Because the people would not voluntarily leave their traditional lands", "D: Because many of the people were too poor to resettle elsewhere", "E: Because such a program would look good to the rest of the world"],
+        multiple_choices: false,
+        required: true,        
+    }; 
+
+    var MC9 = {
+        type: 'pcllab-multiple-choice',
+        minimum_time: 1000 * 5,
+        stimulus: "What sea does the lagoon surrounding the city of Venice border?",
+        options: ["A: The Black Sea", "B: The Aegean Sea", "C: The Sargasso Sea", "D: The Baltic Sea", "E: The Adriatic Sea"],
+        multiple_choices: false,
+        required: true,        
+    }; 
+
+    var MC10 = {
+        type: 'pcllab-multiple-choice',
+        minimum_time: 1000 * 5,
+        stimulus: "What group of people are thought to have founded Venice?",
+        options: ["A: Nomadic Visagoths", "B: Roman refugees", "C: Greek mariners", "D: Lombard warriors", "E: Milanese traders"],
+        multiple_choices: false,
+        required: true,        
+    }; 
+
+    var MC11 = {
+        type: 'pcllab-multiple-choice',
+        minimum_time: 1000 * 5,
+        stimulus: "What empire traded with Western Europe causing Venice to flourish between the 9th and 12th centuries?",
+        options: ["A: The Hittite Empire", "B: The Byzantine Empire", "C: The Ottoman Empire", "D: The Sassanian Empire", "E: The Frankish Empire"],
+        multiple_choices: false,
+        required: true,        
+    }; 
+
+    var MC12 = {
+        type: 'pcllab-multiple-choice',
+        minimum_time: 1000 * 5,
+        stimulus: "What type of material do the foundations of the buildings of Venice sit on?",
+        options: ["A: Wood", "B: Clay", "C: Shale", "D: Limestone", "E: Sand"],
+        multiple_choices: false,
+        required: true,        
+    }; 
+
+    var MC13 = {
+        type: 'pcllab-multiple-choice',
+        minimum_time: 1000 * 5,
+        stimulus: "What is the total population of Venice?",
+        options: ["A: 530,000 people", "B: 160,000 people", "C: 350,000 people", "D: 420,000 people", "E: 270,000 people"],
+        multiple_choices: false,
+        required: true,        
+    }; 
+
+    var MC14 = {
+        type: 'pcllab-multiple-choice',
+        minimum_time: 1000 * 5,
+        stimulus: "Why was Venice the target of frequent invasions between 500 and 800 A.D.?",
+        options: ["A: Because the city was located on the trade route between Rome and Constantinople", "B: Because the area was rich in mineral resources, such as gold", "C: Because the water surrounding the city offered protection from enemies and trade access", "D: Because the lagoon provided a ready source of food and water", "E: Because the leaders of Venice constantly provoked neighboring tribes"],
+        multiple_choices: false,
+        required: true,        
+    }; 
+
+    var MC15 = {
+        type: 'pcllab-multiple-choice',
+        minimum_time: 1000 * 5,
+        stimulus: "How did the leading families of Venice help the city become a cultural leader by the 13th century?",
+        options: ["A: Because they required their armies to bring back pieces of art from wars", "B: Because they supported the work of the most talented artists", "C: Because they increased trade with foreign lands and brought back priceless artistic treasures", "D: Because they enslaved the best artists of any land they captured", "E: Because they helped to establish a city-state with unprescented freedom of expression"],
+        multiple_choices: false,
+        required: true,        
+    }; 
+
+    var MC16 = {
+        type: 'pcllab-multiple-choice',
+        minimum_time: 1000 * 5,
+        stimulus: "What was determined to be the cause of Venice sinking?",
+        options: ["A: Pollution from modern buildings and machines was changing the ecosystem in the lagoon", "B: The loss of water from below houses due to a gradual lowering of the sea level", "C: The foundations of the buildings  were crumbling after centuries of exposure to water", "D: The extraction of water from artesian wells disrupting the sediment below the houses", "E: A rise in sea level led to a sharp influx of salt water in the lagoon, harming the delicate foundations"],
+        multiple_choices: false,
+        required: true,        
+    }; 
+
+
     var retrieve1 = {
         type: 'pcllab-short-answer',
         minimum_time: 1000 * 10,
@@ -899,7 +993,7 @@
         subNum: subjNum,
         cond: condition,
         timeStamp: utcDate,
-        experiment: 'MetacompTS_Exp1',
+        experiment: 'MetacompTS_Exp2',
         //gradeNum: gradeNum,
         //weekNum: weekNum,
         //sortingCond: sortingCond,
@@ -948,7 +1042,7 @@ var save_data_block = {
 
         } else if (condition == '1') {   ////Read once with TS Target Absent JOLs
       
-        timeline.push(noMobile, consentform, demographics, instructions1, instructions2, text1, slide1, slide2, NextText, text2, slide3, slide4, slide5, NextText, text3, slide6, slide7, slide8, NextText, text4, slide9, slide10, NextText, text5, slide11, slide12, CRTInstructions, CRT1, CRT2, CRT3, instructions3, retrieve1, retrieve2, retrieve3, retrieve4, retrieve5, retrieve6, retrieve7, retrieve8, retrieve9, retrieve10, retrieve11, retrieve12, slideF, StratInstructions, slideStrat1,  slideStrat2,  slideStrat3,  slideStrat4,  slideStrat5,  slideStrat6,  slideStrat7,  slideStrat8,  slideStrat9,  slideStrat10,  slideStrat11,  slideStrat12, environment_survey, save_data_block, debrief_block);
+        timeline.push(noMobile, text1, MC1, MC2, MC3, MC4, MC5, MC6, MC7, MC8, consentform, demographics, instructions1, instructions2, text1, slide1, slide2, NextText, text2, slide3, slide4, slide5, NextText, text3, slide6, slide7, slide8, NextText, text4, slide9, slide10, NextText, text5, slide11, slide12, CRTInstructions, CRT1, CRT2, CRT3, instructions3, retrieve1, retrieve2, retrieve3, retrieve4, retrieve5, retrieve6, retrieve7, retrieve8, retrieve9, retrieve10, retrieve11, retrieve12, slideF, StratInstructions, slideStrat1,  slideStrat2,  slideStrat3,  slideStrat4,  slideStrat5,  slideStrat6,  slideStrat7,  slideStrat8,  slideStrat9,  slideStrat10,  slideStrat11,  slideStrat12, environment_survey, save_data_block, debrief_block);
 
       //
 
