@@ -2,13 +2,13 @@
 {
   "General": {
     "title": "<font size =6>General Instructions</font size =6>",
-    "text": "<font size = 5>Welcome! For this experiment, you will study a series of texts about minerals and later you will be tested on your comprehension for these texts. Please do not write anything down or take notes, do not click the back button on your browser, and do not open other tabs or browsers during the experiment. Thank you for your participation! Click 'Continue' when you are ready to start the experiment.</font size = 5>"
+    "text": "<font size = 5>Welcome! For this experiment, you will study a series of texts and later you will be tested on your comprehension for these texts. Please do not write anything down or take notes, do not click the back button on your browser, and do not open other tabs or browsers during the experiment. Thank you for your participation! </font size = 5>"
 
   },
 
   "Study" : {
     "title": "<font size =6>Study Instructions</font size =6>",
-    "text": "<font size = 5>In a moment you will read several texts about minerals, and your job is to learn and understand the material covered in each text. You will have to spend at least 30 seconds reading each text but you can spend as much time as you need to learn all the material in each one. Each text will only be presented once, so do not move on until you are done learning each one. Please try your best and do not cheat or write anything down while reading.</font size = 5>" 
+    "text": "<font size = 5>In a moment you will begin reading, and your job is to learn and understand the material covered in each text. Each text will have 4 parts.  You will have to spend at least 30 seconds reading each part but you can spend as much time as you need to learn all the material in each one. Each part will only be presented once, so do not move on until you are done learning each one. After reading each part, you will be prompted to make 2 judgment of learning for it. For these judgments, you will be asked to rate how confident you are that you understand several key concepts from the section of the text you just read. Please try your best and do not cheat or write anything down while reading and making these judgments. Click 'Continue' when you are ready to start the experiment. </font size = 5>" 
 
   },
 
@@ -20,13 +20,13 @@
 
   "JOL" : {
     "title": "<font size =6>Judgments of Learning Instructions</font size =6>",
-    "text": "<font size = 5>After reading each text, you will be prompted to make 2 to 3 judgment of learning for it. For these judgments, you will be asked to rate how confident you are that you understand several key concepts from the text.  The best way to make judgments of learning is to attempt to recall information from memory about the concept you are judging.  To assist you in doing this, you will be provided with a question that you must answer before making your judgment of learning. Please try your best to answer these questions from memory.  Please do not cheat by using notes or searching/googling answers.  You must spend at least 5 seconds tyring to answer each question but you can spend more time if you need to. After answering the quesiton, you will be prompted to rate your confidence in your understanding for the concept covered in the question by moving a slider to a value between 0 (Not very confident) and 100 (Very Confident). Click 'Continue' to begin learning.</font size = 5>" 
+    "text": "<font size = 5>After reading each text, you will be prompted to make 2 judgment of learning for it. For these judgments, you will be asked to rate how confident you are that you understand several key concepts from the text.  The best way to make judgments of learning is to attempt to recall information from memory about the concept you are judging.  To assist you in doing this, you will be provided with a question that you must answer before making your judgment of learning. Please try your best to answer these questions from memory.  Please do not cheat by using notes or searching/googling answers.  You must spend at least 5 seconds tyring to answer each question but you can spend more time if you need to. After answering the quesiton, you will be prompted to rate your confidence in your understanding for the concept covered in the question by moving a slider to a value between 0 (Not very confident) and 100 (Very Confident). Click 'Continue' to begin learning.</font size = 5>" 
 
   },
 
   "Test" : {
     "title": "<font size =6>Test Instructions</font size =6>",
-    "text": "<font size = 5> You will now be asked to answer a series of questions about each text. Please try your best to answer each question from memory by typing the correct response into the text box provided. You must spend at least 10 seconds trying to answer each question but you can spend more time if you need to. Click 'Continue' when you are ready to begin the test. </font size = 5>"
+    "text": "<font size = 5> You will now be asked to answer a 16 multiple choice questions to test your knowledge of the texts you read today. Please try your best to answer each question by selecting the response that best answers the question. You must spend at least 5 seconds trying to answer each question but you can spend more time if you need to. Click 'Continue' when you are ready to begin the test. </font size = 5>"
 
   },
 
@@ -37,7 +37,7 @@
   },
   "NextText" : {
    "title": "<font size =6>Next Text</font size =6>",
-   "text": "<font size = 5>You will now read a new text. Click Continue to begin learning. </font size = 5>"
+   "text": "<font size = 5>You will now read a new text that is unrelated to the first one.  Please try your best to learn and understand this material. Click Continue to begin learning. </font size = 5>"
 
   },
 
