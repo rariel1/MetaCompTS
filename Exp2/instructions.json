@@ -8,7 +8,7 @@
 
   "Study" : {
     "title": "<font size =6>Study Instructions</font size =6>",
-    "text": "<font size = 5>In a moment you will begin reading, and your job is to learn and understand the material covered in each text. Each text will have 4 parts.  You will have to spend at least 30 seconds reading each part but you can spend as much time as you need to learn all the material in each one. Each part will only be presented once, so do not move on until you are done learning each one. After reading each part, you will be prompted to make 2 judgment of learning for it. For these judgments, you will be asked to rate how confident you are that you understand several key concepts from the section of the text you just read. Please try your best and do not cheat or write anything down while reading and making these judgments. Click 'Continue' when you are ready to start the experiment. </font size = 5>" 
+    "text": "<font size = 5> <p>In a moment you will begin reading, and your job is to learn and understand the material covered in each text. Each text will have 4 parts.  You will have to spend at least 30 seconds reading each part but you can spend as much time as you need to learn all the material in each one. Each part will only be presented once, so do not move on until you are done learning each one.</p><p> After reading each part, you will be prompted to make 2 judgment of learning for it. For these judgments, you will be asked to rate how confident you are that you understand several key concepts from the section of the text you just read. Please try your best and do not cheat or write anything down while reading and making these judgments. Click 'Continue' when you are ready to start the experiment. </p> </font size = 5>" 
 
   },
 
@@ -26,7 +26,7 @@
 
   "Test" : {
     "title": "<font size =6>Test Instructions</font size =6>",
-    "text": "<font size = 5> You will now be asked to answer a 16 multiple choice questions to test your knowledge of the texts you read today. Please try your best to answer each question by selecting the response that best answers the question. You must spend at least 5 seconds trying to answer each question but you can spend more time if you need to. Click 'Continue' when you are ready to begin the test. </font size = 5>"
+    "text": "<font size = 5> You will now answer 16 multiple choice questions to test your knowledge of the texts you read today. Please try your best to answer each question by selecting the response that best answers the question. You can spend as much time as you need to on each question. Click 'Continue' when you are ready to begin the test. </font size = 5>"
 
   },
 
