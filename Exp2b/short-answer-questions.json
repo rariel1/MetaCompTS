@@ -1,0 +1,65 @@
+{
+    "label1": [
+      {"question" :"<center><font size =5>Estimates claim approximately 60% of the radioactive fallout from the Chernobyl disaster landed in what country?</font size =5></center>", "type" : "V"}
+      ],
+    
+    "label2":[
+      {"question" :"<center><font size =5>How were scientists able to predict that the radioactive fallout from Chernobyl would drift to the west over Europe?</font size =65></center>", "type" : "V"}
+      ],
+
+     "label3":[
+      {"question" :"<center><font size =5>Why do some people believe that the power plant operators are not to blame for the Chernobyl disaster?</font size =5></center>", "type" : "V"}
+      ],
+
+      "label4":[
+      {"question" :"<center><font size =5>What was the purpose of the control rods that Legasov suggested might be the cause of the Chernobyl disaster?</font size =5></center>", "type" : "V"}
+      ],
+
+       "label5":[
+      {"question" :"<center><font size =5>What group of people made up the majority of the initial injuries and deaths caused by the Chernobyl disaster?</font size =5></center>", "type" : "V"}
+      ],
+
+        "label6":[
+      {"question" :"<center><font size =5>How many total deaths can be attributed to the nuclear meltdown at Chernobyl?</font size =5></center>", "type" : "V"}
+      ],
+
+         "label7":[
+      {"question" :"<center><font size =5>What happened to Yuri Bandazhevsky after he questioned the official estimates of Chernobyl’s consequences?</font size =5></center>", "type" : "V"}
+      ],
+
+          "label8":[
+      {"question" :"<center><font size =5>Why did activists think there was a need for a state-sponsored relocation program for people living in the areas affected by the Chernobyl disaster?</font size =5></center>", "type" : "V"}
+      ],
+
+          "label9":[
+      {"question" :"<center><font size =5>What sea does the lagoon surrounding the city of Venice border?</font size =5></center>", "type" : "V"}
+      ],
+
+          "label10":[
+      {"question" :"<center><font size =5>What is the total population of Venice?</font size =5></center>", "type" : "V"}
+      ],
+
+          "label11":[
+      {"question" :"<center><font size =5>What group of people are thought to have founded Venice?</font size =5></center>", "type" : "V"}
+      ],
+
+          "label12":[
+      {"question" :"<center><font size =5>Why was Venice the target of frequent invasions between 500 and 800 A.D.?</font size =5></center>", "type" : "V"}
+      ],
+
+           "label13":[
+      {"question" :"<center><font size =5>What empire traded with Western Europe causing Venice to flourish between the 9th and 12th centuries?</font size =5></center>", "type" : "V"}
+      ],
+
+            "label14":[
+      {"question" :"<center><font size =5>How did the leading families of Venice help the city become a cultural leader by the 13th century?</font size =5></center>", "type" : "V"}
+      ],
+
+            "label15":[
+      {"question" :"<center><font size =5>What type of material do the foundations of the buildings of Venice sit on?</font size =5></center>", "type" : "V"}
+      ],
+
+            "label16":[
+      {"question" :"<center><font size =5>What was determined to be the cause of Venice sinking?</font size =5></center>", "type" : "V"}
+      ]
+}

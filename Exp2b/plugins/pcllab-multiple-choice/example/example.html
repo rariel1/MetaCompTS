@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+
+    <!-- MDBootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/css/mdb.min.css">
+
+    <link rel="stylesheet" href="../../../css/jspsych.css">
+    <link rel="stylesheet" href="../../../css/pcllab-plugins.css">
+
+
+    <title>pcllab-multiple-choice</title>
+</head>
+
+<body>
+    <div id="experiment_container"></div>
+
+    <!-- SCRIPTS -->
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/js/mdb.min.js"></script>
+
+    <!-- Then jsPsych -->
+    <script src="../../../jspsych.js"></script>
+
+    <!-- Plugins -->
+    <script src="../plugin.js"></script>
+
+    <script>
+        var trial = {
+            type: 'pcllab-multiple-choice',
+            title: 'Multiple Choice',
+            //stimulus: ["Hello World"],
+            stimulus: ["Question 1", "Question 2"],
+            options: ["Yes", "No", "Maybe", "I don't know", "Can you repeat the question?"],
+            multiple_choices: true,
+            auto_advance: true,
+            isi_time: 500,
+            required: true,
+            scores_file: 'example_scores.json',
+            //horizontal: true,
+            //stimulus_file: "example.json",
+            minimum_time: 2500,
+            //maximum_time: 10000,
+            none_of_the_above: "None of the above",
+
+        };
+
+        jsPsych.init({
+            display_element: $("div#experiment_container"),
+            timeline: [trial],
+            on_finish: function () {
+                jsPsych.data.displayData();
+            }
+        })
+    </script>
+</body>
+
+</html>
