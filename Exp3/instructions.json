@@ -1,0 +1,59 @@
+
+{
+  "General": {
+    "title": "<font size =6>General Instructions</font size =6>",
+    "text": "<font size = 5>Welcome! For this experiment, you will study a series of texts about minerals and later you will be tested on your comprehension for these texts. Please do not write anything down or take notes, do not click the back button on your browser, and do not open other tabs or browsers during the experiment. Thank you for your participation! Click 'Continue' when you are ready to start the experiment.</font size = 5>"
+
+  },
+
+  "Study" : {
+    "title": "<font size =6>Study Instructions</font size =6>",
+    "text": "<font size = 5>In a moment you will read several texts about minerals, and your job is to learn and understand the material covered in each text. You will have to spend at least 30 seconds reading each text but you can spend as much time as you need to learn all the material in each one. Each text will only be presented once, so do not move on until you are done learning each one. Please try your best and do not cheat or write anything down while reading.</font size = 5>" 
+
+  },
+
+  "RP" : {
+    "title": "<font size =6>Retrieval Practice Instructions</font size =6>",
+    "text": "<font size = 5>After reading each text, you will immediately take a practice test on the content you just read. You will have to answer 2 or 3 questions for each text. Please try your best to answer these questions from memory.  Please do not cheat by using notes or searching/googling answers.  You must spend at least 5 seconds tyring to answer each question but you can spend more time if you need to. Click 'Continue' to begin learning.</font size = 5>" 
+
+  },
+
+  "JOL" : {
+    "title": "<font size =6>Judgments of Learning Instructions</font size =6>",
+    "text": "<font size = 5>After reading each text, you will be prompted to make 2 to 3 judgment of learning for it. For these judgments, you will be asked to rate how confident you are that you understand several key concepts from the text.  The best way to make judgments of learning is to attempt to recall information from memory about the concept you are judging.  To assist you in doing this, you will be provided with a question that you must answer before making your judgment of learning. Please try your best to answer these questions from memory.  Please do not cheat by using notes or searching/googling answers.  You must spend at least 5 seconds tyring to answer each question but you can spend more time if you need to. After answering the quesiton, you will be prompted to rate your confidence in your understanding for the concept covered in the question by moving a slider to a value between 0 (Not very confident) and 100 (Very Confident). Click 'Continue' to begin learning.</font size = 5>" 
+
+  },
+
+  "Test" : {
+    "title": "<font size =6>Test Instructions</font size =6>",
+    "text": "<font size = 5> You will now be asked to answer a series of questions about each text. Please try your best to answer each question from memory by typing the correct response into the text box provided. You must spend at least 10 seconds trying to answer each question but you can spend more time if you need to. Click 'Continue' when you are ready to begin the test. </font size = 5>"
+
+  },
+
+ "Reread" : {
+    "title": "<font size =6>Reread Instructions</font size =6>",
+    "text": "<font size = 5> You will now reread the text you just read.  You will have to spend at least 30 seconds rereading the text but you can spend as much time as you need to learn it. Click 'Continue' when you are ready to begin the reading. </font size = 5>"
+
+  },
+  "NextText" : {
+   "title": "<font size =6>Next Text</font size =6>",
+   "text": "<font size = 5>You will now read a new text. Click Continue to begin learning. </font size = 5>"
+
+  },
+
+   "CRT" : {
+   "title": "<font size =6>Word Problems</font size =6>",
+   "text": "<font size = 5>You will now complete 3 word problems.  Please try your best to answer each question to the best of your ability. Please do not google or attempt to look up your responses.  If you desire to, you can use a spare sheet of paper to complete each problem.  However, if you do so, remember to type your final answer in the response box. </font size = 5>"
+
+  },
+
+   "Strategy" : {
+   "title": "<font size =6>Reading Strategies</font size =6>",
+   "text": "<font size = 5> The next set of questions will ask you about the strategies you used when reading each text today.  A strategy will be presented and you will be asked to report the percentage of text passages you used the specified strategy.  If you did not use the specified strategy for any text, please respond 0.  If you used that strategy for all texts please respond 100.  You will make your responses by moving a slider to a value between 0 and 100 to indicate how many passages you used that strategy for today.  If you are not confident that you used a strategy, please respond 0. </font size = 5>"
+
+  }
+
+}
+
+
+

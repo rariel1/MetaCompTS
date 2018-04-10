@@ -24,7 +24,6 @@
         <script src="plugins/pcllab-instructions/plugin.js"></script>
         <script src="plugins/pcllab-demographics/plugin.js"></script>
         <script src="plugins/pcllab-distractor-game/plugin.js"></script>
-        <script src="plugins/pcllab-multiple-choice/plugin.js"></script>
         <script src="plugins/pcllab-short-answer/plugin.js"></script>
         <script src="plugins/pcllab-study-text/plugin.js"></script>
         <script src="plugins/pcllab-ratings-slider/plugin.js"></script>
@@ -45,7 +44,7 @@
     var timeline = [];
     var urlVars = jsPsych.data.urlVariables();
     //var workerId = urlVars.workerId;
-    var condition = Math.floor(Math.random()*4);
+    var condition = Math.floor(Math.random()*3);
     var timeStamp = Math.floor(Date.now() / 1000);
     var dt = new Date();
     var utcDate = dt.toUTCString();    
@@ -144,7 +143,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> what country approximately 60% of the radioactive fallout from the Chernobyl disaster landed. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> how minerals are made </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -153,7 +152,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> how scientists were able to predict that the radioactive fallout from Chernobyl would drift to the west over Europe. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> types of geological processes </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -162,7 +161,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> why some people believe that the power plant operators were not to blame for the Chernobyl disaster. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> what inorganic substances are </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -171,7 +170,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions:"Please rate how confident you are that you understand <b><u> what the purpose was of the control rods that Legasov suggested might be the cause of the Chernobyl disaster. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions:"Please rate how confident you are that you understand <b><u> what organic substances are </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -180,7 +179,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> what group of people made up the majority of the initial injuries and deaths caused by the Chernobyl disaster. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> which living organisms produce minerals </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -189,7 +188,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> how many total deaths can be attributed to the nuclear meltdown at Chernobyl. </u></b>  Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> what a crystalline solid is </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -198,7 +197,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> what happened to Yuri Bandazhevsky after he questioned the official estimates of Chernobyl’s consequences. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> why water is not a mineral </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -207,7 +206,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> why activists think there was a need for a state-sponsored relocation program for people living in the areas affected by the Chernobyl disaster. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> how atoms are arranged in different samples of the same mineral </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -216,7 +215,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> what sea borders the lagoon surrounding the city of Venice. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> what an element is </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -225,7 +224,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> what the total population of Venice is. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> why some minerals are pure elements </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -234,7 +233,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> what group of people are thought to have founded Venice. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> what a chemical compound is </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -243,43 +242,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> why Venice was the target of frequent invasions between 500 and 800 A.D. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
-        button_text: "Continue",
-        display_value: true,
-        hot_and_cold_slider: true
-    };
-        var slide13 = {
-        type: 'pcllab-ratings-slider',
-        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
-        label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> what empire traded with Western Europe causing Venice to flourish between the 9th and 12th centuries. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
-        button_text: "Continue",
-        display_value: true,
-        hot_and_cold_slider: true
-    };
-        var slide14 = {
-        type: 'pcllab-ratings-slider',
-        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
-        label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> how the leading families of Venice helped the city become a cultural leader by the 13th century. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
-        button_text: "Continue",
-        display_value: true,
-        hot_and_cold_slider: true
-    };
-        var slide15 = {
-        type: 'pcllab-ratings-slider',
-        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
-        label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> what type of material do the foundations of the buildings of Venice sit on. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
-        button_text: "Continue",
-        display_value: true,
-        hot_and_cold_slider: true
-    };
-        var slide16 = {
-        type: 'pcllab-ratings-slider',
-        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
-        label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> what was determined to be the cause of Venice sinking. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> why minerals containing the same types of elements can be different </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -288,7 +251,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> that the country where approximately 60% of the radioactive fallout from the Chernobyl disaster landed was Belarus. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> that minerals are made by geological processes </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -297,7 +260,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> that scientists were able to predict the radioactive fallout from Chernobyl would drift to the west over Europe by studying wind patterns. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> that types of geological processes include volcanic activity and the movement of tectonic plates </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -306,7 +269,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> that some people believe power plant operators were not to blame for the Chernobyl disaster because they were not informed about problems with the nuclear reactor. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> that inorganic substances are substances that were not made by livings things </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -315,7 +278,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions:"Please rate how confident you are that you understand <b><u> that the control rods that Legasov suggested might be the cause of the Chernobyl disaster were supposed to be a safety mechanism. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions:"Please rate how confident you are that you understand <b><u> that organic substances are carbon-based substances that were made by living things </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -324,7 +287,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> that emergency response workers made up the majority of the initial injuries and deaths caused by the Chernobyl disaster. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> that minerals are typically inorganic but one exception is the calcium carbonate shells made by marine life </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -333,7 +296,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> that 41 total deaths can be attributed to the nuclear meltdown at Chernobyl. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> that a crystalline solid is a solid in which all atoms are arranged in a regular repeating pattern </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -342,7 +305,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> that Yuri Bandazhevsky was imprisoned after he questioned the official estimates of Chernobyl’s consequences. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> that inorganic substances like water are not minerals because minerals are inorganic solid substances </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -351,7 +314,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> that activists thought there was a need for a state-sponsored relocation program for people living in the areas affected by the Chernobyl disaster because many were too poor to relocate elsewhere. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> that the arrangement of atoms in different samples of the same mineral will always be the same </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -360,7 +323,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> that the Adriatic Sea borders the lagoon surrounding the city of Venice. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> that an element is a substance in which all of its atoms have the same number of protons </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -369,7 +332,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> that the total population of Venice is around 270 thousand people. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> that minerals that are considered pure elements are made of only one type of atom </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -378,7 +341,7 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> that Roman refugees are thought to have founded Venice. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> that a chemical compound is a substance in which atoms of two or more elements bond together in a certain ratio </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
@@ -387,267 +350,237 @@
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> that Venice was the target of frequent invasions between 500 and 800 A.D. because the water surrounding the city offered protection from enemies and trade access. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
+        instructions: "Please rate how confident you are that you understand <b><u> that minerals containing the same types of elements are different when they have different ratios of these elements </u></b> by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
     };
-        var slideTP13 = {
+    var slideF = {
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> that the Bysantine Empire's trade with Western Europe caused Venice to flourish between the 9th and 12th centuries. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
-        button_text: "Continue",
-        display_value: true,
-        hot_and_cold_slider: true
-    };
-        var slideTP14 = {
-        type: 'pcllab-ratings-slider',
-        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
-        label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> that the leading families of Venice helped the city become a cultural leader by the 13th century by supporting the work of talented artists. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
-        button_text: "Continue",
-        display_value: true,
-        hot_and_cold_slider: true
-    };
-        var slideTP15 = {
-        type: 'pcllab-ratings-slider',
-        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
-        label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> that the foundations of the buildings of Venice sit on wood. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
-        button_text: "Continue",
-        display_value: true,
-        hot_and_cold_slider: true
-    };
-        var slideTP16 = {
-        type: 'pcllab-ratings-slider',
-        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
-        label_right: "<b>100%</b>",
-        instructions: "Please rate how confident you are that you understand <b><u> that the cause of Venice sinking was the extraction of water from artesian wells disrupting the sediment below the houses. </u></b> Rate your confidence by moving the slider to a value between 0 (Not very confident) and 100 (Very confident).",
-        button_text: "Continue",
-        display_value: true,
-        hot_and_cold_slider: true
-    };
-        var slideF1 = {
-        type: 'pcllab-ratings-slider',
-        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
-        label_right: "<b>100%</b>",
-        instructions: "Please rate how familiar you were with the <b><u> Chernobyl Disaster text </u></b> you read today before this experiment by moving the slider to a value between 0 (Not very familiar) and 100 (Very familiar).",
+        instructions: "<b>Please rate how familiar you were with the content you read today before this experiment by moving the slider to a value between 0 (Not very familiar) and 100 (Very familiar). </b>",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
     };
 
-        var slideF2 = {
+        var slideStrat1 = {
         type: 'pcllab-ratings-slider',
         label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
         label_right: "<b>100%</b>",
-        instructions: "Please rate how familiar you were with the <b><u> Venice text </u></b> you read today before this experiment by moving the slider to a value between 0 (Not very familiar) and 100 (Very familiar).",
+        instructions: "What percentage of passages did you <b><u> try to visualize the content you were reading. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
         button_text: "Continue",
         display_value: true,
         hot_and_cold_slider: true
     };
-
-//Chernobyl Disaster Part 1
+            var slideStrat2 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you <b><u> attempt to relate the content in each text to things you already know. </u></b> Please move thethe slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+            var slideStrat3 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you<b><u> go back and forth to different sections of the text to try to find relationships among ideas. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+            var slideStrat4 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you <b><u> try to recheck or reread information when you were unsure about it. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+            var slideStrat5 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you <b><u> think about whether or not you understood what you were reading. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+            var slideStrat6 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you <b><u> stop to think about or reflect on the content you were learning. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+            var slideStrat7 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you <b><u> try to guess what questions you might be asked on the final test. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+            var slideStrat8 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you <b><u> try to search for answers to questions that you thought were important. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+            var slideStrat9 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you <b><u> read the text multiple times. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+            var slideStrat10 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you <b><u> just skim the text without closely analyzing and evaluating the information presented. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+            var slideStrat11 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you <b><u> try to summarize the text in your head after reading it. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+            var slideStrat12 = {
+        type: 'pcllab-ratings-slider',
+        label_left: "<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%</b>",
+        label_right: "<b>100%</b>",
+        instructions: "What percentage of passages did you <b><u> try to paraphrase or restate information in your own words. </u></b> Please move the slider to a value between 0 (I never you used this strategy) and 100 (I used this stategy for every text).",
+        button_text: "Continue",
+        display_value: true,
+        hot_and_cold_slider: true
+    };
+//Geo processes
     var text1 = {
         type: 'pcllab-study-text',
         minimum_time: 1000 * 30,
         auto_advance: true,
         label: "label1" 
     };
-//Chernobyl Disaster Part 2
+//Inorganic substances
      var text2 = {
         type: 'pcllab-study-text',
         minimum_time: 1000 * 30,
         auto_advance: true,
         label: "label2" 
     };
-//Chernobyl Disaster Part 3
+//Cystaline solids
      var text3 = {
         type: 'pcllab-study-text',
         minimum_time: 1000 * 30,
         auto_advance: true,
         label: "label3"     
     };
-//Chernobyl Disaster Part 4
+//Elements
      var text4 = {
         type: 'pcllab-study-text',
         minimum_time: 1000 * 30,
         auto_advance: true,
         label: "label4"     
     };
-//Venice Part 1
+//Componds
      var text5 = {
         type: 'pcllab-study-text',
         minimum_time: 1000 * 30,
         auto_advance: true,
-        label: "label5"
+        label: "label5"     
+//Feedback for RP
     };
-//Venice Part 2
-     var text6 = {
+     var Feedback1 = {
         type: 'pcllab-study-text',
-        minimum_time: 1000 * 30,
+        minimum_time: 1000 * 4,
         auto_advance: true,
-        label: "label6"
+        label: "label6"     
     };
-//Venice Part 3
-     var text7 = {
+     var Feedback2 = {
         type: 'pcllab-study-text',
-        minimum_time: 1000 * 30,
+        minimum_time: 1000 * 4,
         auto_advance: true,
-        label: "label7"
+        label: "label7"     
     };
-//Venice Part 4
-     var text8 = {
+     var Feedback3 = {
         type: 'pcllab-study-text',
-        minimum_time: 1000 * 30,
+        minimum_time: 1000 * 4,
         auto_advance: true,
         label: "label8"     
     };
-//TestQs
-     var MC1 = {
-        type: 'pcllab-multiple-choice',
-        minimum_time: 0,///1000 * 5,
-        stimulus: "Estimates claim approximately 60% of the radioactive fallout from the Chernobyl disaster landed in what country?",
-        options: ["A: Poland", "B: Ukraine", "C: Belarus", "D: Latvia", "E: Sweden"],
-        multiple_choices: false,
-        required: true,        
-    }; 
-
-    var MC2 = {
-        type: 'pcllab-multiple-choice',
-        minimum_time: 0,//1000 * 5,
-        stimulus: "Why do some people believe that the power plant operators are not to blame for the Chernobyl disaster?",
-        options: ["A: They were never informed about problems with the nuclear reactor", "B: They were not properly trained by the government", "C: They were understaffed and overworked", "D: They were aware of the problems but powerless to avert the disaster", "E: They informed their superiors, but did not receive instructions back until too late"],
-        multiple_choices: false,
-        required: true,        
-    }; 
-
-    var MC3 = {
-        type: 'pcllab-multiple-choice',
-        minimum_time: 0,//1000 * 5,
-        stimulus: "What group of people made up the majority of the initial injuries and deaths caused by the Chernobyl disaster?",
-        options: ["A: Operational safety personnel", "B: Emergency response workers", "C: Plant maintenance workers", "D: Local residents", "E: Nuclear reactor control staff"],
-        multiple_choices: false,
-        required: true,        
-    }; 
-
-    var MC4 = {
-        type: 'pcllab-multiple-choice',
-        minimum_time: 0,//1000 * 5,
-        stimulus: "What happened to Yuri Bandazhevsky after he questioned the official estimates of Chernobyl’s consequences?",
-        options: ["A: He was discredited by the government", "B: He was murdered", "C: He was forced into exile", "D: He disappeared mysteriously", "E: He was imprisoned"],
-        multiple_choices: false,
-        required: true,        
-    }; 
-
-    var MC5 = {
-        type: 'pcllab-multiple-choice',
-        minimum_time: 0,//1000 * 5,
-        stimulus: "How were scientists able to predict that the radioactive fallout from Chernobyl would drift to the west over Europe?",
-        options: ["A: By tracking the locations of people who reported fallout-related illness", "B: By studying wind patterns", "C: By building computer models of how nuclear fallout moves", "D: Because the nuclear reactor had been built closer to Europe than Central Russia", "E: By researching the outcomes of previous nuclear accidents"],
-        multiple_choices: false,
-        required: true,        
-    }; 
-
-    var MC6 = {
-        type: 'pcllab-multiple-choice',
-        minimum_time: 0,//1000 * 5,
-        stimulus: "What was the purpose of the control rods that Legasov suggested might be the cause of the Chernobyl disaster?",
-        options: ["A: The control rods were a power source", "B: The control rods were an emergency warning system", "C: The control rods were a safety mechanism", "D: The control rods were a firing mechanism", "E: The control rods were a physical support system"],
-        multiple_choices: false,
-        required: true,        
-    }; 
-
-    var MC7 = {
-        type: 'pcllab-multiple-choice',
-        minimum_time: 0,//1000 * 5,
-        stimulus: "How many total deaths can be attributed to the nuclear meltdown at Chernobyl?",
-        options: ["A: 41", "B: 5", "C: 13", "D: 28", "E: 74"],
-        multiple_choices: false,
-        required: true,        
-    }; 
-
-    var MC8 = {
-        type: 'pcllab-multiple-choice',
-        minimum_time: 0,//1000 * 5,
-        stimulus: "Why did activists think there was a need for a state-sponsored relocation program for people living in the areas affected by the Chernobyl disaster?",
-        options: ["A: Because the state government refused to admit any fault in the disaster", "B: Because the activists failed to raise funds through private donors", "C: Because the people would not voluntarily leave their traditional lands", "D: Because many of the people were too poor to resettle elsewhere", "E: Because such a program would look good to the rest of the world"],
-        multiple_choices: false,
-        required: true,        
-    }; 
-
-    var MC9 = {
-        type: 'pcllab-multiple-choice',
-        minimum_time: 0,//1000 * 5,
-        stimulus: "What sea does the lagoon surrounding the city of Venice border?",
-        options: ["A: The Black Sea", "B: The Aegean Sea", "C: The Sargasso Sea", "D: The Baltic Sea", "E: The Adriatic Sea"],
-        multiple_choices: false,
-        required: true,        
-    }; 
-
-    var MC10 = {
-        type: 'pcllab-multiple-choice',
-        minimum_time: 0,//1000 * 5,
-        stimulus: "What group of people are thought to have founded Venice?",
-        options: ["A: Nomadic Visagoths", "B: Roman refugees", "C: Greek mariners", "D: Lombard warriors", "E: Milanese traders"],
-        multiple_choices: false,
-        required: true,        
-    }; 
-
-    var MC11 = {
-        type: 'pcllab-multiple-choice',
-        minimum_time: 0,//1000 * 5,
-        stimulus: "What empire traded with Western Europe causing Venice to flourish between the 9th and 12th centuries?",
-        options: ["A: The Hittite Empire", "B: The Byzantine Empire", "C: The Ottoman Empire", "D: The Sassanian Empire", "E: The Frankish Empire"],
-        multiple_choices: false,
-        required: true,        
-    }; 
-
-    var MC12 = {
-        type: 'pcllab-multiple-choice',
-        minimum_time: 0,//1000 * 5,
-        stimulus: "What type of material do the foundations of the buildings of Venice sit on?",
-        options: ["A: Wood", "B: Clay", "C: Shale", "D: Limestone", "E: Sand"],
-        multiple_choices: false,
-        required: true,        
-    }; 
-
-    var MC13 = {
-        type: 'pcllab-multiple-choice',
-        minimum_time: 0,//1000 * 5,
-        stimulus: "What is the total population of Venice?",
-        options: ["A: 530,000 people", "B: 160,000 people", "C: 350,000 people", "D: 420,000 people", "E: 270,000 people"],
-        multiple_choices: false,
-        required: true,        
-    }; 
-
-    var MC14 = {
-        type: 'pcllab-multiple-choice',
-        minimum_time: 0,//1000 * 5,
-        stimulus: "Why was Venice the target of frequent invasions between 500 and 800 A.D.?",
-        options: ["A: Because the city was located on the trade route between Rome and Constantinople", "B: Because the area was rich in mineral resources, such as gold", "C: Because the water surrounding the city offered protection from enemies and trade access", "D: Because the lagoon provided a ready source of food and water", "E: Because the leaders of Venice constantly provoked neighboring tribes"],
-        multiple_choices: false,
-        required: true,        
-    }; 
-
-    var MC15 = {
-        type: 'pcllab-multiple-choice',
-        minimum_time: 0,//1000 * 5,
-        stimulus: "How did the leading families of Venice help the city become a cultural leader by the 13th century?",
-        options: ["A: Because they required their armies to bring back pieces of art from wars", "B: Because they supported the work of the most talented artists", "C: Because they increased trade with foreign lands and brought back priceless artistic treasures", "D: Because they enslaved the best artists of any land they captured", "E: Because they helped to establish a city-state with unprescented freedom of expression"],
-        multiple_choices: false,
-        required: true,        
-    }; 
-
-    var MC16 = {
-        type: 'pcllab-multiple-choice',
-        minimum_time: 0,//1000 * 5,
-        stimulus: "What was determined to be the cause of Venice sinking?",
-        options: ["A: Pollution from modern buildings and machines was changing the ecosystem in the lagoon", "B: The loss of water from below houses due to a gradual lowering of the sea level", "C: The foundations of the buildings  were crumbling after centuries of exposure to water", "D: The extraction of water from artesian wells disrupting the sediment below the houses", "E: A rise in sea level led to a sharp influx of salt water in the lagoon, harming the delicate foundations"],
-        multiple_choices: false,
-        required: true,        
-    }; 
+     var Feedback4 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 4,
+        auto_advance: true,
+        label: "label9"     
+    };
+      var Feedback5 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 4,
+        auto_advance: true,
+        label: "label10"     
+    };
+      var Feedback6 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 4,
+        auto_advance: true,
+        label: "label11"     
+    };
+      var Feedback7 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 4,
+        auto_advance: true,
+        label: "label12"     
+    };
+      var Feedback8 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 4,
+        auto_advance: true,
+        label: "label13"     
+    };
+      var Feedback9 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 4,
+        auto_advance: true,
+        label: "label14"     
+    };
+       var Feedback10 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 4,
+        auto_advance: true,
+        label: "label15"     
+    };
+       var Feedback11 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 4,
+        auto_advance: true,
+        label: "label16"     
+    };
+       var Feedback12 = {
+        type: 'pcllab-study-text',
+        minimum_time: 1000 * 4,
+        auto_advance: true,
+        label: "label17"     
+    };
 //TestQs
     var retrieve1 = {
         type: 'pcllab-short-answer',
@@ -768,36 +701,41 @@
         show_answer: false, 
         label: "label12"
     }; 
-     var retrieve13 = {
+
+
+     var RP1 = {
         type: 'pcllab-short-answer',
-        minimum_time: 1000 * 10,
+        minimum_time: 1000 * 5,
         show_I_dont_know: false,
         show_progress: false,
         show_word_bank: false,
         show_answer: false, 
         label: "label13"
     }; 
-         var retrieve14 = {
+
+     var RP2 = {
         type: 'pcllab-short-answer',
-        minimum_time: 1000 * 10,
+        minimum_time: 1000 * 5,
         show_I_dont_know: false,
         show_progress: false,
         show_word_bank: false,
         show_answer: false, 
         label: "label14"
     }; 
-         var retrieve15 = {
+
+       var RP3 = {
         type: 'pcllab-short-answer',
-        minimum_time: 1000 * 10,
+        minimum_time: 1000 * 5,
         show_I_dont_know: false,
         show_progress: false,
         show_word_bank: false,
         show_answer: false, 
         label: "label15"
     }; 
-         var retrieve16 = {
+
+       var RP4 = {
         type: 'pcllab-short-answer',
-        minimum_time: 1000 * 10,
+        minimum_time: 1000 * 5,
         show_I_dont_know: false,
         show_progress: false,
         show_word_bank: false,
@@ -805,8 +743,88 @@
         label: "label16"
     }; 
 
-//Cognitive Reflection Test
-    var CRT1 = {
+       var RP5 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label17"
+    }; 
+
+       var RP6 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label18"
+    }; 
+
+       var RP7 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label19"
+    }; 
+
+       var RP8 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label20"
+    }; 
+
+       var RP9 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label21"
+    }; 
+
+    var RP10 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label22"
+    }; 
+
+       var RP11 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label23"
+    };
+
+       var RP12 = {
+        type: 'pcllab-short-answer',
+        minimum_time: 1000 * 5,
+        show_I_dont_know: false,
+        show_progress: false,
+        show_word_bank: false,
+        show_answer: false, 
+        label: "label24"
+    }; 
+
+
+           var CRT1 = {
         type: 'pcllab-short-answer',
         minimum_time: 1000 * 5,
         show_I_dont_know: false,
@@ -816,7 +834,7 @@
         label: "label25"
     }; 
 
-     var CRT2 = {
+           var CRT2 = {
         type: 'pcllab-short-answer',
         minimum_time: 1000 * 5,
         show_I_dont_know: false,
@@ -826,7 +844,7 @@
         label: "label26"
     }; 
 
-    var CRT3 = {
+           var CRT3 = {
         type: 'pcllab-short-answer',
         minimum_time: 1000 * 5,
         show_I_dont_know: false,
@@ -836,7 +854,7 @@
         label: "label27"
     }; 
 
-    var CRT4 = {
+           var CRT4 = {
         type: 'pcllab-short-answer',
         minimum_time: 1000 * 5,
         show_I_dont_know: false,
@@ -846,7 +864,7 @@
         label: "label28"
     }; 
 
-    var CRT5 = {
+       var CRT5 = {
         type: 'pcllab-short-answer',
         minimum_time: 1000 * 5,
         show_I_dont_know: false,
@@ -881,7 +899,7 @@
         subNum: subjNum,
         cond: condition,
         timeStamp: utcDate,
-        experiment: 'MetacompTS_Exp2b_CuedRec',
+        experiment: 'MetacompTS_Exp1',
         //gradeNum: gradeNum,
         //weekNum: weekNum,
         //sortingCond: sortingCond,
@@ -889,7 +907,7 @@
     });
 
 function saveMySQL(data){
-   var data_table = "MetacompTS_MC"; // change this for different experiments
+   var data_table = "MetacompTS"; // change this for different experiments
    $.ajax({
       type:'post',
       cache: false,
@@ -922,26 +940,21 @@ var save_data_block = {
 
  //
 
-       if (condition == '3') {  ////TS Target Absent JOLs: C then V
+       if (condition == '2') {  ////Read once with JOLs
 
-        timeline.push(noMobile, demographics, instructions1, instructions2, text1, slide1, slide2, text2, slide3, slide4, text3, slide5, slide6, text4, slide7, slide8, NextText, text5, slide9, slide10, text6, slide11, slide12, text7, slide13, slide14, text8, slide15, slide16, CRTInstructions, CRT1, CRT2, CRT3, instructions3, retrieve9, retrieve13, retrieve3, retrieve7, retrieve1, retrieve6, retrieve15, retrieve4, retrieve12, retrieve5, retrieve8, retrieve11, retrieve10, retrieve2, retrieve14, retrieve16, slideF1, slideF2, environment_survey, save_data_block, debrief);
-
-      //
-
-        } else if (condition == '2') {   ////TS Target Absent JOLs: V then C
-      
-        timeline.push(noMobile, demographics, instructions1, instructions2, text5, slide9, slide10, text6, slide11, slide12, text7, slide13, slide14, text8, slide15, slide16, NextText, text1, slide1, slide2, text2, slide3, slide4, text3, slide5, slide6, text4, slide7, slide8, CRTInstructions, CRT1, CRT2, CRT3, instructions3, retrieve9, retrieve13, retrieve3, retrieve7, retrieve1, retrieve6, retrieve15, retrieve4, retrieve12, retrieve5, retrieve8, retrieve11, retrieve10, retrieve2, retrieve14, retrieve16, slideF1, slideF2, environment_survey, save_data_block, debrief);
+        timeline.push(noMobile, consentform, demographics, instructions1, instructions2, text1, slide, NextText, text2, slide, NextText, text3, slide, NextText, text4, slide, NextText, text5, slide, CRTInstructions, CRT1, CRT2, CRT3, instructions3, retrieve1, retrieve2, retrieve3, retrieve4, retrieve5, retrieve6, retrieve7, retrieve8, retrieve9, retrieve10, retrieve11, retrieve12, slideF, StratInstructions, slideStrat1,  slideStrat2,  slideStrat3,  slideStrat4,  slideStrat5,  slideStrat6,  slideStrat7,  slideStrat8,  slideStrat9,  slideStrat10,  slideStrat11,  slideStrat12, environment_survey, save_data_block, debrief_block);
 
       //
 
-          } else if (condition == '1') {    ////TS Target Present JOLs: C then V
+        } else if (condition == '1') {   ////Read once with TS Target Absent JOLs
       
-        timeline.push(noMobile, demographics, instructions1, instructions2, text1, slideTP1, slideTP2, text2, slideTP3, slideTP4, text3, slideTP5, slideTP6, text4, slideTP7, slideTP8, NextText, text5, slideTP9, slideTP10, text6, slideTP11, slideTP12, text7, slideTP13, slideTP14, text8, slideTP15, slideTP16, CRTInstructions, CRT1, CRT2, CRT3, instructions3, retrieve9, retrieve13, retrieve3, retrieve7, retrieve1, retrieve6, retrieve15, retrieve4, retrieve12, retrieve5, retrieve8, retrieve11, retrieve10, retrieve2, retrieve14, retrieve16, slideF1, slideF2, environment_survey, save_data_block, debrief);
+        timeline.push(noMobile, consentform, demographics, instructions1, instructions2, text1, slide1, slide2, NextText, text2, slide3, slide4, slide5, NextText, text3, slide6, slide7, slide8, NextText, text4, slide9, slide10, NextText, text5, slide11, slide12, CRTInstructions, CRT1, CRT2, CRT3, instructions3, retrieve1, retrieve2, retrieve3, retrieve4, retrieve5, retrieve6, retrieve7, retrieve8, retrieve9, retrieve10, retrieve11, retrieve12, slideF, StratInstructions, slideStrat1,  slideStrat2,  slideStrat3,  slideStrat4,  slideStrat5,  slideStrat6,  slideStrat7,  slideStrat8,  slideStrat9,  slideStrat10,  slideStrat11,  slideStrat12, environment_survey, save_data_block, debrief_block);
 
       //
-              } else if (condition == '0') {    ////TS Target Present JOLs: V then C
+
+          } else if (condition == '0') {    ////Read once with TS Target Present JOLs
       
-        timeline.push(noMobile, demographics, instructions1, instructions2, text5, slideTP9, slideTP10, text6, slideTP11, slideTP12, text7, slideTP13, slideTP14, text8, slideTP15, slideTP16, NextText, text1, slideTP1, slideTP2, text2, slideTP3, slideTP4, text3, slideTP5, slideTP6, text4, slideTP7, slideTP8, CRTInstructions, CRT1, CRT2, CRT3, instructions3, retrieve9, retrieve13, retrieve3, retrieve7, retrieve1, retrieve6, retrieve15, retrieve4, retrieve12, retrieve5, retrieve8, retrieve11, retrieve10, retrieve2, retrieve14, retrieve16, slideF1, slideF2, environment_survey, save_data_block, debrief);
+        timeline.push(noMobile, consentform, demographics, instructions1, instructions2, text1, slideTP1, slideTP2, NextText, text2, slideTP3, slideTP4, slideTP5, NextText, text3, slideTP6, slideTP7, slideTP8, NextText, text4, slideTP9, slideTP10, NextText, text5, slideTP11, slideTP12, CRTInstructions, CRT1, CRT2, CRT3, instructions3, retrieve1, retrieve2, retrieve3, retrieve4, retrieve5, retrieve6, retrieve7, retrieve8, retrieve9, retrieve10, retrieve11, retrieve12, slideF, StratInstructions, slideStrat1,  slideStrat2,  slideStrat3,  slideStrat4,  slideStrat5,  slideStrat6,  slideStrat7,  slideStrat8,  slideStrat9,  slideStrat10,  slideStrat11,  slideStrat12, environment_survey, save_data_block, debrief_block);
 
       //
 
